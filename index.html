@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="ko" class="theme-light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dr. 권성호 (QUAN CHENGHAO) | Physical AI & Security Robotics</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Sans+KR:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/html-to-image@1.11.11/dist/html-to-image.js"></script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root { interpolate-size: allow-keywords; }
+    html.theme-dark {
+      --bg: #09111f; --surface: #101b2d; --surface-hover: #17243a;
+      --border: rgba(255,255,255,0.10);
+      --text: #f5f9ff; --text-secondary: #b7c4d8;
+      --accent: #1d4ed8; --accent-secondary: #06b6d4;
+      --positive: #14b8a6; --negative: #fb7185; --warning: #f59e0b;
+      --hero-tint: rgba(6, 19, 48, 0.74);
+      --link-bg: rgba(255,255,255,0.08);
+    }
+    html.theme-light {
+      --bg: #f6f9fe; --surface: #ffffff; --surface-hover: #eef5ff;
+      --border: rgba(8, 26, 79, 0.10);
+      --text: #061330; --text-secondary: #4d607d;
+      --accent: #1238c8; --accent-secondary: #0891b2;
+      --positive: #0f766e; --negative: #be123c; --warning: #b45309;
+      --hero-tint: rgba(255,255,255,0.82);
+      --link-bg: rgba(18,56,200,0.08);
+    }
+    body {
+      font-family: 'Noto Sans KR', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      letter-spacing: 0;
+      -webkit-font-smoothing: antialiased;
+      transition: background 0.25s, color 0.25s;
+    }
+    h1, h2, h3 { color: var(--text); line-height: 1.12; letter-spacing: 0; text-wrap: balance; }
+    a { color: inherit; }
+    .skip-link {
+      position: absolute; left: -9999px; top: auto; width: 1px; height: 1px;
+      overflow: hidden; z-index: 10000; padding: 8px 16px; border-radius: 4px;
+      background: var(--accent); color: #fff; text-decoration: none;
+    }
+    .skip-link:focus { position: fixed; left: 16px; top: 16px; width: auto; height: auto; }
+    .viz-menu { position: fixed; top: 16px; right: 16px; z-index: 9999; }
+    .viz-menu-toggle {
+      width: 44px; height: 44px; border-radius: 10px; border: 1px solid var(--border);
+      background: color-mix(in srgb, var(--surface) 88%, transparent); color: var(--text);
+      display: flex; align-items: center; justify-content: center; cursor: pointer;
+      backdrop-filter: blur(14px);
+    }
+    .viz-menu-dropdown {
+      position: absolute; top: 52px; right: 0; min-width: 190px; padding: 8px;
+      background: color-mix(in srgb, var(--surface) 94%, transparent);
+      border: 1px solid var(--border); border-radius: 10px; backdrop-filter: blur(16px);
+      opacity: 0; visibility: hidden; transform: translateY(-8px); transition: all 0.2s ease;
+    }
+    .viz-menu-dropdown.open { opacity: 1; visibility: visible; transform: translateY(0); }
+    .viz-menu-dropdown button {
+      width: 100%; border: none; background: transparent; color: var(--text);
+      padding: 10px 12px; border-radius: 8px; font: inherit; font-size: 14px;
+      text-align: left; cursor: pointer;
+    }
+    .viz-menu-dropdown button:hover { background: var(--surface-hover); }
+    .page { min-height: 100vh; }
+    .hero {
+      min-height: 88vh;
+      display: grid;
+      align-items: end;
+      position: relative;
+      isolation: isolate;
+      overflow: hidden;
+      padding: 80px clamp(22px, 6vw, 84px) 64px;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(90deg, var(--hero-tint) 0%, color-mix(in srgb, var(--hero-tint) 72%, transparent) 46%, transparent 76%),
+        url("chenghao_intro_assets/physical_ai_robotics_hero.png") center / cover no-repeat;
+      z-index: -2;
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: auto 0 0;
+      height: 120px;
+      background: linear-gradient(180deg, transparent, var(--bg));
+      z-index: -1;
+    }
+    .hero-inner { max-width: 760px; }
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: 10px;
+      color: var(--accent); font-weight: 800; font-size: 15px; margin-bottom: 20px;
+    }
+    .eyebrow::before {
+      content: ""; width: 32px; height: 3px; border-radius: 999px;
+      background: var(--accent-secondary);
+    }
+    h1 { font-size: clamp(44px, 8vw, 88px); font-weight: 900; max-width: 760px; }
+    .hero-copy {
+      margin-top: 22px; max-width: 680px; font-size: clamp(18px, 2.4vw, 24px);
+      color: var(--text-secondary); font-weight: 600;
+    }
+    .links {
+      display: flex; flex-wrap: wrap; gap: 10px; margin-top: 28px;
+    }
+    .link-button {
+      display: inline-flex; align-items: center; justify-content: center;
+      min-height: 42px; padding: 10px 14px; border: 1px solid var(--border);
+      border-radius: 8px; background: var(--link-bg); text-decoration: none;
+      font-weight: 800; color: var(--text);
+    }
+    .content {
+      width: min(1120px, calc(100% - 44px));
+      margin: 0 auto;
+      padding: 64px 0 88px;
+    }
+    .section-title {
+      font-size: clamp(28px, 4vw, 44px);
+      font-weight: 900;
+      margin-bottom: 18px;
+    }
+    .section-lead {
+      color: var(--text-secondary);
+      font-size: 19px;
+      max-width: 860px;
+      margin-bottom: 28px;
+    }
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+      margin: 28px 0 56px;
+    }
+    .stat, .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      box-shadow: 0 18px 46px rgba(8, 26, 79, 0.08);
+    }
+    .stat { padding: 22px; min-height: 140px; }
+    .stat strong { display: block; font-size: 34px; line-height: 1; color: var(--accent); margin-bottom: 12px; }
+    .stat span { color: var(--text-secondary); font-weight: 700; }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+    .card { padding: 26px; }
+    .card h3 { font-size: 23px; font-weight: 900; margin-bottom: 12px; }
+    .card p, .card li { color: var(--text-secondary); font-size: 17px; }
+    .card ul { padding-left: 20px; }
+    .card li + li { margin-top: 8px; }
+    .closing {
+      margin-top: 56px;
+      padding: 30px;
+      border-left: 6px solid var(--accent);
+      background: color-mix(in srgb, var(--surface) 92%, var(--accent) 8%);
+      border-radius: 8px;
+    }
+    .closing strong { color: var(--accent); }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .animate { animation: fadeInUp 0.6s ease-out both; }
+    .animate.delay-1 { animation-delay: 0.1s; }
+    .animate.delay-2 { animation-delay: 0.2s; }
+    .reveal { opacity: 0; transform: translateY(22px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    @media (max-width: 820px) {
+      .hero { min-height: 82vh; padding: 76px 22px 48px; }
+      .hero::before {
+        background:
+          linear-gradient(180deg, var(--hero-tint) 0%, color-mix(in srgb, var(--hero-tint) 90%, transparent) 56%, var(--bg) 100%),
+          url("chenghao_intro_assets/physical_ai_robotics_hero.png") center right / cover no-repeat;
+      }
+      .stats, .grid { grid-template-columns: 1fr; }
+      .stat { min-height: auto; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation: none !important; transition: none !important; }
+      .reveal { opacity: 1; transform: none; }
+    }
+    @media print {
+      body { background: #fff !important; color: #111 !important; }
+      .viz-menu { display: none !important; }
+      .hero { min-height: auto; padding: 48px 32px; }
+      .hero::before { opacity: 0.18; }
+      .content { width: auto; padding: 32px; }
+      .stat, .card, .closing { box-shadow: none; break-inside: avoid; border-color: #d5dbea; }
+      * { print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+    }
+    @page { margin: 0.7in; }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">본문으로 이동</a>
+  <div class="viz-menu" aria-label="페이지 도구">
+    <button class="viz-menu-toggle" onclick="toggleMenu()" aria-label="메뉴 열기">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+        <line x1="3" y1="5" x2="17" y2="5"/><line x1="3" y1="10" x2="17" y2="10"/><line x1="3" y1="15" x2="17" y2="15"/>
+      </svg>
+    </button>
+    <div class="viz-menu-dropdown" id="vizMenuDropdown">
+      <button onclick="cycleTheme()"><span id="themeLabel">Light</span> theme</button>
+      <button onclick="downloadImage()">Download PNG</button>
+      <button onclick="window.print()">Print / PDF</button>
+    </div>
+  </div>
+
+  <main id="main-content" class="page">
+    <section class="hero" aria-label="소개 첫 화면">
+      <div class="hero-inner">
+        <div class="eyebrow animate">Dogu Robotics · Dogu X · Physical AI</div>
+        <h1 class="animate delay-1">순찰 보안 로봇의 다음 장을 만들고 있습니다.</h1>
+        <p class="hero-copy animate delay-2">
+          Dr. 권성호 (QUAN CHENGHAO)입니다. 연구 현장과 실제 서비스 운영을 잇는 관점으로 로봇, AI, 물리보안의 전환을 다루고 있습니다.
+        </p>
+        <div class="links animate delay-2">
+          <a class="link-button" href="https://www.linkedin.com/in/chenghao-quan/" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a class="link-button" href="https://www.dogurobotics.com/" target="_blank" rel="noreferrer">Dogu Robotics</a>
+          <a class="link-button" href="https://www.dogu.xyz/" target="_blank" rel="noreferrer">Dogu</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="content" aria-label="자기소개 상세">
+      <h2 class="section-title reveal" data-reveal>현장 운영에서 Physical AI로</h2>
+      <p class="section-lead reveal" data-reveal>
+        대학과 연구소에서 연구개발을 이어오다 2020년 라이다에 대한 관심을 계기로 Dogu Robotics에 합류했습니다.
+        이후 SW팀, SW본부, 개발 랩장, 연구소장, CTO를 거쳐 2026년 초부터 Google X를 모델로 한 Dogu X 조직을 이끌고 있습니다.
+      </p>
+
+      <div class="stats" aria-label="핵심 숫자">
+        <article class="stat reveal" data-reveal>
+          <strong>2020</strong>
+          <span>Dogu Robotics 합류</span>
+        </article>
+        <article class="stat reveal" data-reveal>
+          <strong>130+</strong>
+          <span>전국 실운영 순찰 보안 로봇</span>
+        </article>
+        <article class="stat reveal" data-reveal>
+          <strong>Dogu X</strong>
+          <span>Physical AI 조직 리드</span>
+        </article>
+        <article class="stat reveal" data-reveal>
+          <strong>Top 1</strong>
+          <span>순찰 보안 로봇 분야 목표</span>
+        </article>
+      </div>
+
+      <div class="grid">
+        <article class="card reveal" data-reveal>
+          <h3>지금 다루는 것</h3>
+          <ul>
+            <li>4족 4휠 로봇과 로봇팔을 중심으로 한 Physical AI 적용</li>
+            <li>휠 기반 순찰 보안 로봇과 관제서비스 개발 및 운영</li>
+            <li>실제 현장에서 반복 가능한 로봇 서비스 구조 만들기</li>
+          </ul>
+        </article>
+        <article class="card reveal" data-reveal>
+          <h3>배우고 싶은 것</h3>
+          <ul>
+            <li>VLM/VLA, 강화학습, 로봇 지능의 최신 흐름</li>
+            <li>AI 시대의 개발 방식 변화와 전환 전략</li>
+            <li>물리보안 영역에서 AI와 로봇이 바꿀 운영 방식</li>
+          </ul>
+        </article>
+        <article class="card reveal" data-reveal>
+          <h3>나누고 싶은 경험</h3>
+          <ul>
+            <li>전국 130대 로봇 실운영에서 얻은 배포와 운영 시행착오</li>
+            <li>관제서비스와 현장 로봇 사이의 제품화 경험</li>
+            <li>센서, 네트워크, 고객 현장이 만나는 지점의 현실적인 고민</li>
+          </ul>
+        </article>
+        <article class="card reveal" data-reveal>
+          <h3>함께 해보고 싶은 활동</h3>
+          <ul>
+            <li>Physical AI 기반 순찰 보안 시나리오 토론</li>
+            <li>센서 융합과 로봇 지능 적용 아이디어 실험</li>
+            <li>서로의 현장 경험을 연결해 실전형 문제 정의하기</li>
+          </ul>
+        </article>
+      </div>
+
+      <section class="closing reveal" data-reveal aria-label="마무리">
+        <p>
+          AI 시대에는 개발 방식과 물리보안 현장이 동시에 크게 바뀐다고 믿습니다.
+          이 변화의 파도 위에서 배우고 실험하며, <strong>순찰 보안 로봇 분야의 Top 1</strong>을 향해 가고 싶습니다.
+        </p>
+      </section>
+    </section>
+  </main>
+
+  <script>
+    function toggleMenu() {
+      var dropdown = document.getElementById('vizMenuDropdown');
+      if (dropdown) dropdown.classList.toggle('open');
+    }
+    document.addEventListener('click', function(e) {
+      if (!e.target.closest('.viz-menu')) {
+        var dropdown = document.getElementById('vizMenuDropdown');
+        if (dropdown) dropdown.classList.remove('open');
+      }
+    });
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        var dropdown = document.getElementById('vizMenuDropdown');
+        if (dropdown) dropdown.classList.remove('open');
+      }
+    });
+    var savedTheme = localStorage.getItem('viz-theme');
+    var currentTheme = savedTheme || 'light';
+    function applyTheme(t) {
+      document.documentElement.className = 'theme-' + t;
+      var label = document.getElementById('themeLabel');
+      if (label) label.textContent = t === 'dark' ? 'Dark' : 'Light';
+      localStorage.setItem('viz-theme', t);
+      currentTheme = t;
+      if (typeof onThemeChange === 'function') onThemeChange();
+    }
+    function cycleTheme() { applyTheme(currentTheme === 'dark' ? 'light' : 'dark'); }
+    function onThemeChange() {}
+    applyTheme(currentTheme);
+    document.querySelectorAll('[data-reveal]').forEach(function(el) { el.classList.add('reveal'); });
+    var revealObserver = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(function(el) { revealObserver.observe(el); });
+    async function downloadImage() {
+      var menu = document.querySelector('.viz-menu');
+      if (menu) menu.style.display = 'none';
+      try {
+        var url = await htmlToImage.toPng(document.body, {
+          quality: 1,
+          pixelRatio: 2,
+          filter: function(node) { return !node.classList || !node.classList.contains('viz-menu'); }
+        });
+        var a = document.createElement('a');
+        a.href = url;
+        a.download = 'chenghao-physical-ai-profile.png';
+        a.click();
+      } catch (error) {
+        console.error('Download failed:', error);
+      }
+      if (menu) menu.style.display = '';
+    }
+  </script>
+</body>
+</html>
