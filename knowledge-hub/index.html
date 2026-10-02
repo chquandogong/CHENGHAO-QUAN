@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Knowledge Hub 소개</title>
+<meta name="description" content="문서가 답하고, 사람이 잇고, 지식이 남는다 — 협력사 문서와 엔지니어 사이에서 답이 쌓이게 하는 다국어 협업 시스템. 왜 만들었고, 지금 무엇이 되고, 정말 가치가 있는지.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg:#f6f8f7; --panel:#ffffff; --panel-2:#eef3f0; --ink:#141d1a; --dim:#5e6b66;
+    --line:#dde5e1; --accent:#2f6d5b; --accent-soft:#e2eee8;
+    --warn:#8a5a14; --warn-soft:#f6ecd9; --bad:#9a3228; --bad-soft:#f7e4e0;
+    --mono:"JetBrains Mono", ui-monospace, Consolas, monospace;
+  }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+    --bg:#0e1311; --panel:#151b19; --panel-2:#1b2421; --ink:#e6ece9; --dim:#8d9b95;
+    --line:#26302d; --accent:#6fbfa3; --accent-soft:#1c2c26;
+    --warn:#e0b066; --warn-soft:#2b2417; --bad:#ec8f83; --bad-soft:#2d1b18;
+  }}
+  :root[data-theme="dark"] {
+    --bg:#0e1311; --panel:#151b19; --panel-2:#1b2421; --ink:#e6ece9; --dim:#8d9b95;
+    --line:#26302d; --accent:#6fbfa3; --accent-soft:#1c2c26;
+    --warn:#e0b066; --warn-soft:#2b2417; --bad:#ec8f83; --bad-soft:#2d1b18;
+  }
+  * { box-sizing:border-box; }
+  html { -webkit-text-size-adjust:100%; }
+  body { margin:0; background:var(--bg); color:var(--ink);
+    font:16px/1.75 "Noto Sans KR", system-ui, sans-serif; word-break:keep-all; overflow-wrap:break-word; }
+  a { color:var(--accent); }
+  .wrap { max-width:860px; margin:0 auto; padding:0 16px; }
+  header.hero { padding:72px 0 40px; }
+  .eyebrow { font:500 13px/1 var(--mono); letter-spacing:.08em; color:var(--accent); text-transform:uppercase; }
+  h1 { font-size:clamp(34px,6vw,52px); line-height:1.15; margin:14px 0 18px; letter-spacing:-.02em; }
+  .lede { font-size:19px; color:var(--dim); max-width:640px; margin:0; }
+  .rule { margin:28px 0 0; padding:18px 22px; border-left:3px solid var(--accent); background:var(--accent-soft);
+    border-radius:0 10px 10px 0; font-weight:500; }
+  .pair { margin:18px 0 0; font-size:15px; color:var(--dim); }
+  section { padding:44px 0; border-top:1px solid var(--line); }
+  h2 { font-size:26px; line-height:1.3; margin:0 0 6px; letter-spacing:-.01em; }
+  .sub { color:var(--dim); margin:0 0 24px; }
+  h3 { font-size:17px; margin:0 0 6px; }
+  p { margin:0 0 14px; }
+  .grid { display:grid; gap:14px; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); }
+  .card { background:var(--panel); border:1px solid var(--line); border-radius:12px; padding:18px 20px; }
+  .card p { margin:0; color:var(--dim); font-size:15px; }
+  .q { font-size:18px; font-weight:500; margin:0 0 4px; }
+  .num { font:500 13px/1 var(--mono); color:var(--accent); margin-bottom:10px; display:block; }
+
+  /* loop */
+  .loop { background:var(--panel); border:1px solid var(--line); border-radius:14px; padding:20px; }
+  .steps { list-style:none; margin:0; padding:0; display:grid; gap:10px; grid-template-columns:repeat(3,1fr); counter-reset:step; }
+  .steps li { counter-increment:step; background:var(--bg); border:1px solid var(--line); border-top:3px solid var(--accent);
+    border-radius:8px; padding:12px 14px 14px; }
+  .steps li::before { content:counter(step, decimal-leading-zero); display:block; font:500 11px/1.2 var(--mono); color:var(--accent); margin-bottom:6px; }
+  .steps b { display:block; font-size:15px; margin-bottom:4px; }
+  .steps span { font-size:13.5px; color:var(--dim); line-height:1.6; display:block; }
+  .back { margin:12px 0 0; text-align:center; font-size:14px; color:var(--dim); }
+  .back b { color:var(--accent); font-weight:500; }
+  @media (max-width:640px) { .steps { grid-template-columns:1fr; } }
+
+  table { width:100%; border-collapse:collapse; font-size:15px; background:var(--panel); border:1px solid var(--line); border-radius:12px; overflow:hidden; }
+  th, td { text-align:left; padding:11px 14px; border-bottom:1px solid var(--line); vertical-align:top; }
+  th { font-size:13px; color:var(--dim); font-weight:500; background:var(--panel-2); }
+  tr:last-child td { border-bottom:0; }
+  .tbl { overflow-x:auto; -webkit-overflow-scrolling:touch; }
+  .tag { display:inline-block; font:500 12px/1 var(--mono); padding:5px 8px; border-radius:6px; white-space:nowrap; }
+  .ok { background:var(--accent-soft); color:var(--accent); }
+  .part { background:var(--warn-soft); color:var(--warn); }
+  .no { background:var(--bad-soft); color:var(--bad); }
+
+  .stats { display:grid; gap:12px; grid-template-columns:repeat(auto-fit,minmax(170px,1fr)); margin-bottom:22px; }
+  .stat { background:var(--panel); border:1px solid var(--line); border-radius:12px; padding:16px 18px; }
+  .stat b { display:block; font:500 28px/1.1 var(--mono); letter-spacing:-.02em; }
+  .stat span { font-size:13.5px; color:var(--dim); }
+
+  .verdict { display:grid; gap:14px; grid-template-columns:1fr 1fr; }
+  @media (max-width:640px) { .verdict { grid-template-columns:1fr; } }
+  ul { margin:0; padding-left:20px; }
+  li { margin:0 0 8px; }
+  .card ul { color:var(--dim); font-size:15px; }
+  .notlist { list-style:none; padding:0; margin:18px 0 0; }
+  .notlist li { padding:12px 0; border-top:1px solid var(--line); color:var(--dim); margin:0; }
+  .notlist li b { color:var(--ink); font-weight:500; }
+  .note { font-size:13.5px; color:var(--dim); margin-top:14px; }
+  footer { padding:36px 0 56px; border-top:1px solid var(--line); color:var(--dim); font-size:14px; }
+  .theme-btn { position:absolute; top:14px; right:14px; background:var(--panel); color:var(--ink); border:1px solid var(--line);
+    border-radius:8px; padding:6px 10px; font:500 12px var(--mono); cursor:pointer; }
+</style>
+</head>
+<body>
+<button class="theme-btn" id="theme" type="button" aria-label="테마 전환">테마</button>
+
+<div class="wrap">
+<header class="hero">
+  <div class="eyebrow">Knowledge Hub · 조직 사이의 지식 순환</div>
+  <h1>문서가 답하고,<br>사람이 잇고, 지식이 남는다.</h1>
+  <p class="lede">협력사에서 받은 기술 문서와, 그 문서를 만든 회사의 엔지니어 사이에서 답이 흩어지지 않게 하는 비공개 협업 시스템입니다. 문서에 있는 것은 문서를 인용해 답하고, 없는 것은 답할 수 있는 사람에게 보내고, 검증된 답은 다음 사람이 찾는 지식이 됩니다. 각자 자기 언어로.</p>
+  <div class="rule">제품 밖에서 오간 답은 없는 것으로 친다. 다음 사람이 찾을 수 없기 때문이다.</div>
+  <p class="pair"><a href="../prism/">Prism</a>이 한 사람의 판단이 흩어지지 않게 한다면, Knowledge Hub는 조직과 조직 사이의 답이 흩어지지 않게 합니다.</p>
+</header>
+
+<section>
+  <h2>처음 풀려던 문제</h2>
+  <p class="sub">문서는 받았습니다. 문서에 없는 것이 문제였습니다.</p>
+  <p>협력사와 로봇 플랫폼을 함께 다루면서 매뉴얼을 공유받았습니다. 매뉴얼이 답하는 것은 읽으면 되지만, 현장에서 막히는 질문의 상당수는 매뉴얼 밖에 있습니다. 그 질문은 메일과 메신저로 오가고, 답은 그 스레드 속에 묻혀 물었던 사람만 기억합니다.</p>
+  <div class="grid" style="margin-top:22px">
+    <div class="card"><span class="num">손실 1</span><p class="q">같은 질문의 반복</p><p>새로 온 사람은 같은 질문을 다시 하고, 답했던 사람은 같은 답을 다시 씁니다.</p></div>
+    <div class="card"><span class="num">손실 2</span><p class="q">언어와 시간대</p><p>한국어로 뭉친 질문은 상대에게 닿지 못하고, 근무 시간이 거의 겹치지 않아 실시간 대화가 성립하지 않습니다.</p></div>
+    <div class="card"><span class="num">손실 3</span><p class="q">신입의 출발점</p><p>"그동안 무슨 일이 있었지? 어디부터 봐야 하지?"에 답할 곳이 없습니다.</p></div>
+  </div>
+  <p class="note">처음 요청서에는 이런 항목도 있었습니다 — "이런 걸 만드는 것이 의미 있나? 효율·효과적일까? 만든다면 어떻게 정말 잘 활용할까?" 이 페이지의 끝에서 두 번째 절이 그 질문에 대한 지금의 답입니다.</p>
+</section>
+
+<section>
+  <h2>컨셉 — 질문 하나가 지식이 되는 한 바퀴</h2>
+  <p class="sub">대화를 제품 안으로 들여옵니다. 질문은 스레드로, 답은 출처와 함께, 채택된 답은 검증을 거쳐 위키로.</p>
+  <div class="loop">
+    <ol class="steps">
+      <li><b>먼저 문서에 묻는다</b><span>검색은 답을 지어내지 않고 출처를 보여 준다. 모든 사실은 문서와 쪽 번호로 되돌아간다</span></li>
+      <li><b>없으면 질문이 된다</b><span>대상·관찰한 맥락·필요한 결정을 붙여 검토할 수 있는 형태로 정리한다. 쓴 사람의 문장은 원문으로 남는다</span></li>
+      <li><b>답할 사람에게 간다</b><span>주제에 따라 담당 부서의 업무함으로 간다. 알림은 보내지 않는다 — 업무함이 그 사람의 목록이다</span></li>
+      <li><b>각자 자기 언어로</b><span>스레드는 하나, 화면은 언어마다. 원문은 바뀌지 않고, 사람이 확인하지 않은 번역에는 배지가 붙는다</span></li>
+      <li><b>물은 사람이 채택한다</b><span>답한 사람이 스스로 올릴 수 없다. 질문자가 해결로 표시하고, 검토자가 승격하고, 발행자가 검증한다</span></li>
+      <li><b>다음 사람이 찾는다</b><span>검증된 답은 위키·검색·근거 기반 답변의 근거가 된다. 인용할 수 있는 형태로</span></li>
+    </ol>
+    <p class="back">06의 답은 다음 질문의 01이 됩니다 — <b>검증된 답은 다음 사람의 문서</b></p>
+  </div>
+  <div class="grid" style="margin-top:18px">
+    <div class="card"><h3>출처가 권위다</h3><p>근거가 없거나 서로 어긋나면 공백을 드러내고 질문을 만듭니다. 그럴듯한 문장으로 메우지 않습니다.</p></div>
+    <div class="card"><h3>언어는 관점이다</h3><p>원문은 하나, 화면은 여럿. 번역이 없으면 라벨을 단 원문을 그대로 보여 줍니다.</p></div>
+    <div class="card"><h3>승격은 사람이 한다</h3><p>무엇이 지식이 될지는 모델이 아니라 역할이 정합니다. 단계마다 보증하는 것이 다릅니다.</p></div>
+  </div>
+  <ul class="notlist">
+    <li><b>범용 챗봇이 아닙니다.</b> 근거 기반 답변은 인용된 문서, 검토된 위키 절, 검증된 Q&amp;A 안에서만 답하고, 서버가 인용을 다시 검사합니다.</li>
+    <li><b>승인 체계가 아닙니다.</b> 로봇 운전 권한, 안전 승인, 시험 합격, 고객 배포 승인을 대신하지 않습니다.</li>
+    <li><b>알림 도구가 아닙니다.</b> 메일도 메신저도 보내지 않습니다. 순환은 제품 안에서 닫힙니다.</li>
+    <li><b>공개 시스템이 아닙니다.</b> 초대받은 계정만 들어오고, 자료는 열람 등급으로 걸러집니다.</li>
+  </ul>
+</section>
+
+<section>
+  <h2>왜 이 모양인가</h2>
+  <p class="sub">시작할 때 네 가지 설계안을 나란히 놓고 골랐고, 하루 뒤의 감사가 방향을 한 번 바꿨습니다.</p>
+  <div class="tbl"><table>
+    <thead><tr><th>설계안</th><th>핵심 주장</th><th>어떻게 됐나</th></tr></thead>
+    <tbody>
+      <tr><td>사용 우선</td><td>가장 큰 위험은 기술이 아니라 아무도 안 쓰는 것. 이미 쓰는 채널 위에 최소 화면만 얹는다</td><td>심사 1위로 골격이 됨</td></tr>
+      <tr><td>순환 중심</td><td>문서 Q&amp;A 챗봇 자체는 가치가 작다. 가치는 질문이 답이 되고 답이 위키가 되는 순환을 시스템이 강제하는 데 있다</td><td>상태 흐름과 검증 장치를 가져옴</td></tr>
+      <tr><td>최소 구현</td><td>한 사람이 1주 안에 띄우고 주 1시간으로 운영한다</td><td>인용 검증기를 가져옴</td></tr>
+      <tr><td>조립</td><td>기성 도구로 요구의 약 80%를 바로 덮고, 전용 앱은 사용량이 넘칠 때까지 보류한다</td><td>접을 때의 출구로 남김</td></tr>
+    </tbody>
+  </table></div>
+  <p class="note">다음 날 서로를 보지 않은 두 AI 감사(Claude·Codex)가 같은 판정을 냈습니다 — 인용 기반 다국어 지식 자산은 만들어졌지만, 협력사 엔지니어의 답이 위키로 돌아오는 고리가 끊겨 있다. 그래서 질문을 메일·메신저로 내보내던 방식을 버리고, 협력사 엔지니어가 시스템 안에 들어와 자기 업무함에서 읽고 답하는 쪽으로 바꿨습니다.</p>
+  <div class="grid" style="margin-top:18px">
+    <div class="card"><h3>보내지 않고 들여온다</h3><p>질문을 밖으로 보내지 않습니다. 협력사 엔지니어도 시스템 안의 참여자입니다.</p></div>
+    <div class="card"><h3>기밀 경계는 배포 단위</h3><p>이 자료를 보면 안 되는 상대는 같은 앱의 다른 권한이 아니라 별도 배포로 나눕니다.</p></div>
+    <div class="card"><h3>위키의 정본은 Git</h3><p>앱이 위키에 자동으로 쓰지 않습니다. 검증된 항목을 마크다운으로 내보내 검토를 거쳐 반영합니다.</p></div>
+  </div>
+  <p class="note">구성: Next.js 앱 · Google Cloud Run(초대 계정만 접속) · Firestore · Vertex AI(번역·근거 답변). 원본 PDF는 저장소에 두지 않고, 정리된 텍스트와 도해 노트만 배포에 들어갑니다.</p>
+</section>
+
+<section>
+  <h2>지금 되는 것</h2>
+  <p class="sub">저장소 기록 기준(마지막 갱신 2026-09-18, 코드 v0.3.1-alpha.7). 요청(2026-09-04)부터 지금 모습까지 2주.</p>
+  <div class="tbl"><table>
+    <thead><tr><th>부분</th><th>상태</th><th>실제로 하는 일</th></tr></thead>
+    <tbody>
+      <tr><td>위키</td><td><span class="tag ok">작동</span></td><td>22쪽 × 한국어·영어·중국어. 사실마다 매뉴얼 쪽 인용, 입문 → 심화 → 실기 학습 경로</td></tr>
+      <tr><td>질문 순환</td><td><span class="tag ok">구현됨</span></td><td>질문 → 정리·번역 미리보기 → 주제방 스레드 → 담당 업무함 → 답·되묻기·해결 → 승격 → 검증 → 위키·검색·AI 근거</td></tr>
+      <tr><td>협력사 엔지니어 참여</td><td><span class="tag ok">구현됨</span></td><td>자기 언어 화면에서 읽고, 답하고, 되묻고, 처리를 끝냄</td></tr>
+      <tr><td>근거 기반 AI · 번역</td><td><span class="tag ok">구현됨</span></td><td>사용자 단위 권한과 일일·월간 한도. 번역은 설정을 켠 배포에서만 동작</td></tr>
+      <tr><td>비공개 배포</td><td><span class="tag ok">운영 중</span></td><td>초대받은 계정만 접속. 2026-09-16부터</td></tr>
+      <tr><td>질문 카탈로그</td><td><span class="tag ok">준비됨</span></td><td>178건</td></tr>
+      <tr><td>시나리오(작업 절차)</td><td><span class="tag part">일부</span></td><td>제안 접수와 분류까지. 모든 항목이 '실행 금지'로 시작</td></tr>
+      <tr><td>여러 문서 묶음을 한 배포에</td><td><span class="tag part">설계만</span></td><td>두 번째 협력사·프로젝트는 지금은 별도 배포</td></tr>
+      <tr><td>실제 질문 시범 운영</td><td><span class="tag no">미실행</span></td><td>측정치가 아직 없음</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<section>
+  <h2>정말 필요하고, 가치가 있나</h2>
+  <p class="sub">이 질문은 처음 요청서에 있었고, 만든 다음 날의 감사에서 다시 나왔습니다.</p>
+  <div class="stats">
+    <div class="stat"><b>2주</b><span>요청에서 지금 모습까지 (09-04 → 09-18)</span></div>
+    <div class="stat"><b>2.4만</b><span>앱 코드 줄 수, 테스트 포함 (저장소 스크립트 약 2,900줄 별도)</span></div>
+    <div class="stat"><b>22×3</b><span>인용 기반 위키 쪽수 × 언어</span></div>
+    <div class="stat"><b>0</b><span>시범 운영에서 이 순환을 돈 실제 질문</span></div>
+  </div>
+  <div class="verdict">
+    <div class="card">
+      <h3><span class="tag ok">확인됨</span> 읽을 가치가 있는 자산은 생겼다</h3>
+      <ul>
+        <li>서로를 보지 않은 두 감사가 같은 판정을 냈습니다 — 인용 기반 다국어 지식 자산은 만들어졌다.</li>
+        <li>감사가 짚은 "답이 위키로 돌아오지 않는다"는 끊김은 다음 릴리스에서 순환 전체를 코드로 닫았습니다.</li>
+        <li>개인정보와 호스트명을 저장소에 두지 않는 규칙을 CI가 막습니다.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3><span class="tag part">미확인</span> 지식이 스스로 자라는가</h3>
+      <ul>
+        <li>실제 질문이 아직 한 건도 이 순환을 돌지 않았습니다. 쓰임에 대한 증거가 없습니다.</li>
+        <li>핵심은 협력사 엔지니어가 들어와 답하느냐인데, 그건 이 시스템이 정할 수 없는 일입니다.</li>
+        <li>번역 검수·큐레이션에 드는 시간이 절약한 시간보다 작은지 모릅니다.</li>
+        <li>만든 사람이 아닌 사람이 질문·검토·자료 갱신을 해 본 적이 없습니다. 지금은 한 사람에게 기대고 있습니다.</li>
+        <li>"가장 큰 위험은 아무도 안 쓰는 것"이라는 안을 골격으로 삼았지만, 제품은 그 뒤로 커졌고 아직 쓰이지 않았습니다.</li>
+      </ul>
+    </div>
+  </div>
+  <p class="note" style="font-size:15px;color:var(--ink)"><b>지금의 결론:</b> 지식 자산은 생겼지만, 그 지식이 사람들의 답으로 자라는지는 아직 모릅니다. 기능은 충분하고, 남은 것은 실제로 써 보는 일입니다.</p>
+</section>
+
+<section>
+  <h2>앞으로</h2>
+  <p class="sub">성공은 기능 수가 아니라 쓰임으로 판단합니다. 기준은 미리 적어 두었습니다.</p>
+  <div class="grid">
+    <div class="card"><span class="num">시범 운영</span><h3>실제 질문 5~10건</h3><p>지금 막혀 있는 질문을 업무함에서 처리하고, 검증된 답 3건을 발행합니다. 다른 사람이 그 답을 따로 꺼내 쓴 사례 1건이 첫 증거입니다.</p></div>
+    <div class="card"><span class="num">계속할 조건</span><h3>재사용과 순편익</h3><p>답이 재사용되고, 절약한 시간이 검수·큐레이션 시간보다 크면 그때 두 번째 협력사·프로젝트로 넓힐지 정합니다(넓힌다면 별도 배포).</p></div>
+    <div class="card"><span class="num">줄일 조건</span><h3>정적 위키로 축소</h3><p>10근무일 안에 검증된 답이 0/3이면 정적 위키와 수동 큐레이션으로 줄이는 것을 검토합니다. 위키 원고는 마크다운이라 줄여도 자산은 남습니다.</p></div>
+  </div>
+</section>
+
+<footer>
+  이 페이지에는 협력사 이름, 협력사 자료, 제품 화면이 들어 있지 않습니다. 상태와 수치는 저장소 기록(마지막 갱신 2026-09-18) 기준입니다.
+</footer>
+</div>
+
+<script>
+  (function () {
+    var root = document.documentElement, btn = document.getElementById('theme');
+    try { var s = localStorage.getItem('prism-theme'); if (s) root.setAttribute('data-theme', s); } catch (e) {}
+    btn.addEventListener('click', function () {
+      var cur = root.getAttribute('data-theme') ||
+        (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      var next = cur === 'dark' ? 'light' : 'dark';
+      root.setAttribute('data-theme', next);
+      try { localStorage.setItem('prism-theme', next); } catch (e) {}
+    });
+  })();
+</script>
+</body>
+</html>
