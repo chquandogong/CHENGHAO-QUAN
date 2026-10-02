@@ -28,6 +28,13 @@ globalThis.PROFILE_LOCALES = {
       together1: 'Physical AI 기반 순찰 보안 시나리오 토론',
       together2: '센서 융합과 로봇 지능 적용 아이디어 실험',
       together3: '서로의 현장 경험을 연결해 실전형 문제 정의하기',
+      projectsLabel: '만들고 있는 시스템',
+      projectsTitle: 'AI와 일하는 방식을 시스템으로',
+      projectsLead: '경영·기술·개발 전반의 판단과 지식이 흩어지지 않게 하는 두 시스템을 만들고 있습니다. 각 소개 페이지에는 지금 되는 것과 아직 증명되지 않은 것을 함께 적었습니다.',
+      prismDesc: '한 사람의 AI 작업을 위한 개인 지식 시스템. 여러 AI 어시스턴트와 나눈 결정과 버린 대안을 모아, 다음 작업 앞에 다시 꺼내 놓습니다.',
+      prismLink: 'Prism 소개 보기',
+      hubDesc: '조직과 조직 사이의 지식 순환. 문서가 답하는 것은 인용해 답하고, 없는 것은 답할 사람에게 보내고, 검증된 답은 위키가 됩니다.',
+      hubLink: 'Knowledge Hub 소개 보기',
       closing: 'AI 시대에는 개발 방식과 물리보안 현장이 동시에 크게 바뀐다고 믿습니다. 새로운 기술을 배우고 현장에서 실험하며, 순찰 보안 로봇 분야의 Top 1을 향해 가고 싶습니다. 로봇 운영이나 협업이 궁금하시면 언제든 연락해 주세요.'
     },
     slide: {
@@ -73,6 +80,13 @@ globalThis.PROFILE_LOCALES = {
       together1: 'Discuss patrol and security scenarios using Physical AI',
       together2: 'Experiment with sensor fusion and robot intelligence',
       together3: 'Use our field experience to define practical problems worth solving',
+      projectsLabel: 'Systems I am building',
+      projectsTitle: 'Turning how we work with AI into systems',
+      projectsLead: 'I am building two systems that keep decisions and knowledge across management, technology and development from scattering. Each overview states what works today and what has not been proven yet.',
+      prismDesc: 'A personal knowledge system for one person’s AI work. It gathers the decisions made with several AI assistants, and the alternatives that were rejected, and puts them back in front of the next task.',
+      prismLink: 'Prism overview (in Korean)',
+      hubDesc: 'A knowledge loop between organizations. What the documents answer is answered with citations, what they do not is routed to someone who can answer, and verified answers become the wiki.',
+      hubLink: 'Knowledge Hub overview (in Korean)',
       closing: 'I believe AI will transform both development methods and physical security operations. I want to explore new technologies and test them in the field, with the ambition of becoming No. 1 in patrol and security robotics. Please get in touch to talk about robot operations or collaboration.'
     },
     slide: {
@@ -118,6 +132,13 @@ globalThis.PROFILE_LOCALES = {
       together1: '讨论基于物理AI的巡逻安防应用场景',
       together2: '尝试传感器融合与机器人智能的应用方案',
       together3: '结合彼此的现场经验，明确值得解决的实际问题',
+      projectsLabel: '正在构建的系统',
+      projectsTitle: '把与AI协作的方式变成系统',
+      projectsLead: '我正在构建两个系统，让经营、技术与开发中的判断和知识不再分散。每个介绍页都同时写明了目前已经实现的部分和尚未得到验证的部分。',
+      prismDesc: '面向个人AI工作的知识系统。汇集与多个AI助手共同做出的决定以及被放弃的方案，并在下一项工作开始前重新呈现。',
+      prismLink: 'Prism 介绍（韩文）',
+      hubDesc: '组织之间的知识循环。文档能回答的，引用文档作答；文档没有的，转给能回答的人；经过验证的答案沉淀为维基。',
+      hubLink: 'Knowledge Hub 介绍（韩文）',
       closing: '我相信，AI将同时深刻改变开发方式与物理安防的运营模式。我希望持续学习新技术，并在真实场景中开展实验，朝着巡逻安防机器人领域第一的目标迈进。欢迎随时联系我，交流机器人运营经验或探讨合作。'
     },
     slide: {

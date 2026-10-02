@@ -22,6 +22,7 @@ Dogu Robotics / Dogu X. Professional profile and one-slide introduction for busi
 - `locales.js`: Korean, English, and Simplified Chinese copy, slide text, and speaker notes.
 - `i18n.js`: language selection, shareable `?lang=ko|en|zh` URLs, and localized downloads.
 - `downloads/`: editable PPTX and PNG files for each language. Original filenames remain as Korean aliases for existing links.
+- `prism/`, `knowledge-hub/`: self-contained overviews (Korean only) of two systems, linked from the profile in all three languages.
 
 The QR code on every slide opens the [profile](https://chquandogong.github.io/CHENGHAO-QUAN/). The site remembers the visitor's language selection when browser storage is available. GitHub Pages serves the root of the `gh-pages` branch. No build step is required.
 

@@ -172,6 +172,8 @@
     .card p, .card li { color: var(--text-secondary); font-size: 17px; }
     .card ul { padding-left: 20px; }
     .card li + li { margin-top: 8px; }
+    .projects { margin-top: 56px; }
+    .card .project-link { margin-top: 18px; }
     .closing {
       margin-top: 56px;
       padding: 30px;
@@ -317,6 +319,25 @@
           </ul>
         </article>
       </div>
+
+      <section class="projects" aria-label="만들고 있는 시스템" data-i18n-aria="projectsLabel">
+        <h2 class="section-title reveal" data-reveal data-i18n="projectsTitle">AI와 일하는 방식을 시스템으로</h2>
+        <p class="section-lead reveal" data-reveal data-i18n="projectsLead">
+          경영·기술·개발 전반의 판단과 지식이 흩어지지 않게 하는 두 시스템을 만들고 있습니다. 각 소개 페이지에는 지금 되는 것과 아직 증명되지 않은 것을 함께 적었습니다.
+        </p>
+        <div class="grid">
+          <article class="card reveal" data-reveal>
+            <h3>Prism</h3>
+            <p data-i18n="prismDesc">한 사람의 AI 작업을 위한 개인 지식 시스템. 여러 AI 어시스턴트와 나눈 결정과 버린 대안을 모아, 다음 작업 앞에 다시 꺼내 놓습니다.</p>
+            <a class="link-button project-link" href="prism/" hreflang="ko" data-i18n="prismLink">Prism 소개 보기</a>
+          </article>
+          <article class="card reveal" data-reveal>
+            <h3>Knowledge Hub</h3>
+            <p data-i18n="hubDesc">조직과 조직 사이의 지식 순환. 문서가 답하는 것은 인용해 답하고, 없는 것은 답할 사람에게 보내고, 검증된 답은 위키가 됩니다.</p>
+            <a class="link-button project-link" href="knowledge-hub/" hreflang="ko" data-i18n="hubLink">Knowledge Hub 소개 보기</a>
+          </article>
+        </div>
+      </section>
 
       <section class="closing reveal" data-reveal aria-label="마무리" data-i18n-aria="closingLabel">
         <p data-i18n="closing">
