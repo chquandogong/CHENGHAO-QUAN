@@ -3,7 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dr. 권성호 (QUAN CHENGHAO) | Physical AI & Security Robotics</title>
+  <title>QUAN CHENGHAO · 권성호 | 호기심을, 작동하는 시스템으로.</title>
+  <meta name="description" content="QUAN CHENGHAO · 권성호. 로보틱스, Physical AI, AI와 함께 만드는 도구. 호기심을, 작동하는 시스템으로.">
+  <meta name="theme-color" content="#F5F0E5">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Sans+KR:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -220,8 +222,9 @@
     }
     @page { margin: 0.7in; }
   </style>
+  <link rel="stylesheet" href="brand.css">
 </head>
-<body>
+<body class="profile-page">
   <a href="#main-content" class="skip-link" data-i18n="skip">본문으로 이동</a>
   <nav class="language-switch" aria-label="언어 선택" data-i18n-aria="language">
     <a href="?lang=ko" lang="ko" hreflang="ko" data-language="ko" aria-current="true">한국어</a>
@@ -244,12 +247,22 @@
   <main id="main-content" class="page">
     <section class="hero" aria-label="소개 첫 화면" data-i18n-aria="hero">
       <div class="hero-inner">
-        <div class="eyebrow animate">Dogu Robotics · Dogu X · Physical AI</div>
-        <h1 class="animate delay-1">Dr. 권성호 <span>(QUAN CHENGHAO)</span></h1>
-        <p class="hero-copy animate delay-2" data-i18n="heroCopy">
-          순찰 보안 로봇의 다음 장을 만들고 있습니다. 연구 현장과 실제 서비스 운영을 잇는 관점으로 로봇, AI, 물리보안의 전환을 다루고 있습니다.
-        </p>
-        <div class="links animate delay-2">
+        <div class="brand-home"><span class="brand-fold" aria-hidden="true"></span>QUAN CHENGHAO</div>
+        <div class="hero-grid">
+          <div>
+            <p class="brand-name"><strong>QUAN CHENGHAO</strong><span>권성호 · PhD</span></p>
+            <p class="eyebrow" data-i18n="brandFocus">Systems Architect &amp; Problem Framer · Robotics · Physical AI</p>
+            <h1 data-i18n="brandTagline">호기심을, 작동하는 시스템으로.</h1>
+            <p class="brand-english" data-i18n="brandSubtitle">From curiosity to working systems.</p>
+            <p class="hero-copy" data-i18n="heroCopy">현장의 문제를 관찰하고, 질문을 정리하고, 로봇과 AI 도구로 구체화합니다. 탐색에서 구현까지, 생각이 실제로 쓰이는 과정을 만듭니다.</p>
+          </div>
+          <figure class="nuri-signature">
+            <img src="chenghao_intro_assets/nuri.webp" width="1223" height="1286" alt="Nuri, cobalt-and-cream cloud fox with a folded silver tail" decoding="async">
+            <figcaption data-i18n="nuriCaption">Nuri · 호기심을 함께하는 동반자</figcaption>
+          </figure>
+        </div>
+        <div class="links">
+          <a class="link-button" href="#projects" data-i18n="exploreProjects">프로젝트 보기</a>
           <a class="link-button" href="https://www.linkedin.com/in/chenghao-quan/" target="_blank" rel="noreferrer">LinkedIn</a>
           <a class="link-button" href="https://www.dogurobotics.com/" target="_blank" rel="noreferrer">Dogu Robotics</a>
           <a class="link-button" href="https://www.dogu.xyz/" target="_blank" rel="noreferrer">Dogu</a>
@@ -259,12 +272,14 @@
       </div>
     </section>
 
-    <section class="content" aria-label="자기소개 상세" data-i18n-aria="details">
+    <section id="about" class="content" aria-label="자기소개 상세" data-i18n-aria="details">
       <h2 class="section-title reveal" data-reveal data-i18n="sectionTitle">현장 운영에서 Physical AI로</h2>
       <p class="section-lead reveal" data-reveal data-i18n="sectionLead">
         대학과 연구소에서 연구개발을 이어오다 2020년 라이다에 대한 관심을 계기로 Dogu Robotics에 합류했습니다.
         이후 SW팀, SW본부, 개발 랩장, 연구소장, CTO를 거쳐 2026년 초부터 Google X를 모델로 한 Dogu X 조직을 이끌고 있습니다.
       </p>
+
+      <p class="section-lead" data-i18n="focusCopy">순찰 보안 로봇의 다음 장을 만들고 있습니다. 연구 현장과 실제 서비스 운영을 잇는 관점으로 로봇, AI, 물리보안의 전환을 다루고 있습니다.</p>
 
       <div class="stats" aria-label="핵심 숫자" data-i18n-aria="numbers">
         <article class="stat reveal" data-reveal>
@@ -320,7 +335,7 @@
         </article>
       </div>
 
-      <section class="projects" aria-label="만들고 있는 시스템" data-i18n-aria="projectsLabel">
+      <section id="projects" class="projects" aria-label="만들고 있는 시스템" data-i18n-aria="projectsLabel">
         <h2 class="section-title reveal" data-reveal data-i18n="projectsTitle">AI와 일하는 방식을 시스템으로</h2>
         <p class="section-lead reveal" data-reveal data-i18n="projectsLead">
           경영·기술·개발 전반의 판단과 지식이 흩어지지 않게 하는 두 시스템을 만들고 있습니다. 각 소개 페이지에는 지금 되는 것과 아직 증명되지 않은 것을 함께 적었습니다.
@@ -345,6 +360,20 @@
           이 변화의 파도 위에서 배우고 실험하며, <strong>순찰 보안 로봇 분야의 Top 1</strong>을 향해 가고 싶습니다.
         </p>
       </section>
+      <section class="brand-community" aria-label="SUNSHINE STUDIO & Nuri">
+        <p class="brand-community-label">SUNSHINE STUDIO · NURI</p>
+        <h2 data-i18n="studioLine">함께 탐색하고, 작게 만들고, 끝까지 다듬습니다.</h2>
+        <p data-i18n="nuriStory">SUNSHINE STUDIO는 탐색하고 만들고 나누는 개인 협업 공간입니다. 구름여우 Nuri의 코발트블루는 집중을, 크림색은 따뜻함을, 은빛 종이접기 꼬리는 아이디어를 결과물로 만드는 과정을 나타냅니다.</p>
+      </section>
+      <footer class="brand-footer">
+        <strong>QUAN CHENGHAO</strong>
+        <nav aria-label="Profiles">
+          <a href="https://www.linkedin.com/in/chenghao-quan/" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a href="https://github.com/chquan17-bit" target="_blank" rel="noreferrer">GitHub · chquan17-bit</a>
+          <a href="https://github.com/chquandogong" target="_blank" rel="noreferrer">GitHub · chquandogong</a>
+          <a href="https://www.reddit.com/user/BrainJaded4312/" target="_blank" rel="noreferrer">Reddit · sunshine</a>
+        </nav>
+      </footer>
     </section>
   </main>
 
