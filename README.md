@@ -1,6 +1,16 @@
-# Dr. 권성호 (QUAN CHENGHAO)
+# QUAN CHENGHAO
 
-Dogu Robotics / Dogu X. Professional profile and one-slide introduction for business meetings, networking, and collaboration.
+**호기심을, 작동하는 시스템으로.**
+
+**From curiosity to working systems.**
+
+<img src="chenghao_intro_assets/nuri.webp" alt="Nuri, the cloud-fox brand companion" width="200">
+
+Dr. 권성호. Robotics, Physical AI, and AI-assisted tools. Dogu Robotics / Dogu X.
+
+[Public website](https://chquandogong.github.io/CHENGHAO-QUAN/) · [LinkedIn](https://www.linkedin.com/in/chenghao-quan/) · [GitHub: chquandogong](https://github.com/chquandogong) · [GitHub: chquan17-bit](https://github.com/chquan17-bit) · [Reddit](https://www.reddit.com/user/BrainJaded4312/)
+
+Professional profile and editable one-slide introductions for business meetings, networking, and collaboration. **SUNSHINE STUDIO** is the personal community; **Nuri** is the cloud-fox companion, not a company logo.
 
 ## Languages / 언어 / 语言
 
@@ -26,7 +36,7 @@ Dogu Robotics / Dogu X. Professional profile and one-slide introduction for busi
 
 The QR code on every slide opens the [profile](https://chquandogong.github.io/CHENGHAO-QUAN/). The site remembers the visitor's language selection when browser storage is available. GitHub Pages serves the root of the `gh-pages` branch. No build step is required.
 
-Biography and the figure of 130 operating robots are based on information supplied by Dr. 권성호 (QUAN CHENGHAO). Nuri is an AI-generated cloud-fox brand companion. The original robotics concept illustration remains in the assets directory for the existing presentation downloads; it is not an actual product photograph.
+Biography and the figure of 130 operating robots are based on information supplied by Dr. 권성호 (QUAN CHENGHAO). Nuri is an AI-generated cloud-fox brand companion, reused from the approved master without redesign. The original robotics concept illustration remains as a legacy asset; it is not an actual product photograph. The current PPTX and PNG downloads use Nuri and preserve the original biography, speaker narration, and QR code.
 
 [LinkedIn](https://www.linkedin.com/in/chenghao-quan/) · [Dogu Robotics](https://www.dogurobotics.com/) · [Dogu](https://www.dogu.xyz/)
 
@@ -40,3 +50,9 @@ The passport spelling **QUAN CHENGHAO** is the canonical English display name. T
 - SUNSHINE STUDIO is a personal collaboration space; Nuri is its cloud-fox companion.
 
 Existing biography, project explanations, downloadable slides, and their URLs are retained.
+
+## Link previews
+
+The profile, Prism, and Knowledge Hub include canonical URLs, Open Graph and Twitter metadata, and Nuri icons. The shared `chenghao_intro_assets/social-card.png` is a 1200 × 630 Korean/English brand card. Subpages have their own static titles, descriptions, and canonical URLs.
+
+Language selection remains client-side. GitHub Pages serves the same static HTML for `?lang=ko`, `?lang=en`, and `?lang=zh`, so social crawlers receive a shared static preview rather than three localized previews. The profile itself and its downloads support all three languages; Prism and Knowledge Hub remain Korean-only.
