@@ -1,4 +1,4 @@
-# QUAN CHENGHAO
+# QUAN CHENGHAO · 권성호
 
 **호기심을, 작동하는 시스템으로.**
 
@@ -6,7 +6,7 @@
 
 <img src="chenghao_intro_assets/nuri.webp" alt="Nuri, the cloud-fox brand companion" width="200">
 
-Dr. 권성호. Robotics, Physical AI, and AI-assisted tools. Dogu Robotics / Dogu X.
+Robotics, Physical AI, and AI-assisted tools. Dogu Robotics / Dogu X.
 
 [Public website](https://chquandogong.github.io/CHENGHAO-QUAN/) · [LinkedIn](https://www.linkedin.com/in/chenghao-quan/) · [GitHub: chquandogong](https://github.com/chquandogong) · [GitHub: chquan17-bit](https://github.com/chquan17-bit) · [Reddit](https://www.reddit.com/user/BrainJaded4312/)
 
@@ -36,13 +36,13 @@ Professional profile and editable one-slide introductions for business meetings,
 
 The QR code on every slide opens the [profile](https://chquandogong.github.io/CHENGHAO-QUAN/). The site remembers the visitor's language selection when browser storage is available. GitHub Pages serves the root of the `gh-pages` branch. No build step is required.
 
-Biography and the figure of 130 operating robots are based on information supplied by Dr. 권성호 (QUAN CHENGHAO). Nuri is an AI-generated cloud-fox brand companion, reused from the approved master without redesign. The original robotics concept illustration remains as a legacy asset; it is not an actual product photograph. The current PPTX and PNG downloads use Nuri and preserve the original biography, speaker narration, and QR code.
+Biography and the figure of 130 operating robots are based on information supplied by QUAN CHENGHAO · 권성호. Nuri is an AI-generated cloud-fox brand companion, reused from the approved master without redesign. The original robotics concept illustration remains as a legacy asset; it is not an actual product photograph. The current PPTX and PNG downloads use Nuri and preserve the original biography, speaker narration, and QR code.
 
 [LinkedIn](https://www.linkedin.com/in/chenghao-quan/) · [Dogu Robotics](https://www.dogurobotics.com/) · [Dogu](https://www.dogu.xyz/)
 
 ## Personal brand · 2026-10-23
 
-The passport spelling **QUAN CHENGHAO** is the canonical English display name. The website uses cobalt `#2456D8`, cream `#F5F0E5`, silver `#BBC6D6`, and night ink `#14243A`, with accessible light and dark treatments.
+The passport spelling **QUAN CHENGHAO** is the canonical English display name. All languages show it prominently with **권성호 · Ph.D.** directly below on the website and presentation slides. Single-line titles and metadata use **QUAN CHENGHAO · 권성호**. The website uses cobalt `#2456D8`, cream `#F5F0E5`, silver `#BBC6D6`, and night ink `#14243A`, with accessible light and dark treatments.
 
 - `brand.css`: shared presentation styles for the profile, Prism, and Knowledge Hub.
 - `chenghao_intro_assets/nuri.webp`: optimized Nuri companion illustration.

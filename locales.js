@@ -48,7 +48,9 @@ globalThis.PROFILE_LOCALES = {
     slide: {
       'program-eyebrow': 'Physical AI · 순찰 보안 로봇',
       'main-title': 'AI 시대,\n순찰 보안 로봇\nTop 1을 향해',
-      'person-line': 'Dr. 권성호 (QUAN CHENGHAO)  |  Dogu Robotics · Dogu X',
+      'display-name': 'QUAN CHENGHAO',
+      'korean-name': '권성호 · Ph.D.',
+      'person-line': 'Dogu Robotics · Dogu X',
       'short-intro': '2020년 Dogu Robotics 합류 후 SW 조직과 연구소, CTO를 거쳐 2026년 초부터 Dogu X를 이끌고 있습니다.',
       'label-현재': '현재', 'value-현재': '4족 4휠 로봇, 로봇팔, 순찰 보안 로봇과 관제서비스',
       'label-운영': '운영', 'value-운영': '전국 130대 로봇 실운영 경험과 현장 배포 노하우',
@@ -62,7 +64,7 @@ globalThis.PROFILE_LOCALES = {
   en: {
     htmlLang: 'en', label: 'English',
     page: {
-      title: "QUAN CHENGHAO | From curiosity to working systems.",
+      title: "QUAN CHENGHAO · 권성호 | From curiosity to working systems.",
       skip: 'Skip to content', tools: 'Page tools', menu: 'Open menu', language: 'Select language',
       themeLight: 'Light theme', themeDark: 'Dark theme', image: 'Save page as PNG', print: 'Print / PDF',
       imageError: 'The page image could not be saved. Please use the slide PNG download.',
@@ -108,7 +110,9 @@ globalThis.PROFILE_LOCALES = {
     slide: {
       'program-eyebrow': 'Physical AI · Security Robotics',
       'main-title': 'Patrol & security\nrobotics in the AI era\nAiming for No. 1',
-      'person-line': 'Dr. 권성호 (QUAN CHENGHAO)  |  Dogu Robotics · Dogu X',
+      'display-name': 'QUAN CHENGHAO',
+      'korean-name': '권성호 · Ph.D.',
+      'person-line': 'Dogu Robotics · Dogu X',
       'short-intro': 'Joined Dogu Robotics in 2020. Led software and R&D, served as CTO.\nLeading Dogu X since early 2026.',
       'label-현재': 'Focus', 'value-현재': 'Quadruped wheeled robots, arms and security fleets',
       'label-운영': 'Field', 'value-운영': '130 robots operating across Korea, deployment expertise',
@@ -122,7 +126,7 @@ globalThis.PROFILE_LOCALES = {
   zh: {
     htmlLang: 'zh-Hans', label: '中文',
     page: {
-      title: "QUAN CHENGHAO | 从好奇出发，让系统真正运转。",
+      title: "QUAN CHENGHAO · 권성호 | 从好奇出发，让系统真正运转。",
       skip: '跳至正文', tools: '页面工具', menu: '打开菜单', language: '选择语言',
       themeLight: '浅色主题', themeDark: '深色主题', image: '保存页面为PNG', print: '打印 / PDF',
       imageError: '页面图片保存失败，请使用幻灯片PNG下载链接。',
@@ -168,7 +172,9 @@ globalThis.PROFILE_LOCALES = {
     slide: {
       'program-eyebrow': '物理AI · 巡逻安防机器人',
       'main-title': 'AI时代的\n巡逻安防机器人\n目标：行业第一',
-      'person-line': 'Dr. 권성호 (QUAN CHENGHAO)  |  Dogu Robotics · Dogu X',
+      'display-name': 'QUAN CHENGHAO',
+      'korean-name': '권성호 · Ph.D.',
+      'person-line': 'Dogu Robotics · Dogu X',
       'short-intro': '2020年加入Dogu Robotics，历任软件与研发负责人、CTO，自2026年初起领导Dogu X团队。',
       'label-현재': '目前', 'value-현재': '四足四轮机器人、机械臂、巡逻安防机器人与监控调度服务',
       'label-운영': '运营', 'value-운영': '在韩国各地实际运营130台机器人，积累现场部署经验',

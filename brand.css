@@ -55,8 +55,8 @@ html.theme-dark, :root[data-theme="dark"] {
 .profile-page .hero::before, .profile-page .hero::after { display: none; }
 .profile-page .hero-inner { width: min(1120px,100%); max-width: none; margin: 0 auto; }
 .profile-page .hero-grid { display: grid; grid-template-columns: minmax(0,1fr) 180px; gap: 42px; align-items: end; }
-.profile-page .brand-name { display: flex; flex-wrap: wrap; align-items: baseline; gap: 8px 16px; margin-bottom: 12px; }
-.profile-page .brand-name strong { font: 700 clamp(24px,3vw,32px)/1.3 Inter, "Segoe UI", sans-serif; letter-spacing: -.02em; }
+.profile-page .brand-name { display: flex; flex-direction: column; align-items: flex-start; gap: 8px; margin-bottom: 12px; }
+.profile-page .brand-name strong { font: 700 32px/1.3 Inter, "Segoe UI", sans-serif; letter-spacing: 0; }
 .profile-page .brand-name span { font-size: 16px; color: var(--text-secondary); }
 .profile-page .eyebrow { font-size: 13px; font-weight: 600; margin: 0 0 28px; letter-spacing: .025em; }
 .profile-page .eyebrow::before { display: none; }
@@ -103,8 +103,7 @@ html.theme-dark, :root[data-theme="dark"] {
   .profile-page .stats { gap: 10px; }
   .profile-page .stat { padding: 20px; }
   .profile-page .stat strong { font-size: 28px; }
-  .profile-page .brand-name { display: block; }
-  .profile-page .brand-name span { display: block; margin-top: 8px; }
+  .profile-page .brand-name strong { font-size: 28px; }
 }
 @media print {
   .profile-page .hero { padding: 30px 0; }
