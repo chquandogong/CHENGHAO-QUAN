@@ -72,6 +72,7 @@ html.theme-dark, :root[data-theme="dark"] {
 .profile-page .link-button:hover { background: var(--surface-hover); }
 .profile-page .language-switch a[aria-current="true"], .profile-page .skip-link { background: #2456d8; color: #fffdf8; }
 .profile-page .content { border-top: 1px solid var(--border); padding-top: 52px; }
+.profile-page #projects, .profile-page #about { scroll-margin-top: 92px; }
 .profile-page .section-title { font-size: clamp(28px,3vw,36px); font-weight: 700; }
 .profile-page .card h3 { font-weight: 700; }
 .profile-page .stat, .profile-page .card { box-shadow: none; border-radius: 6px; }
